@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Quiz - For My Love</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div id="welcomeScreen" class="screen active">
+            <div class="welcome-content">
+                <h1>💕 A Quiz About Our Love 💕</h1>
+                <p class="subtitle">My dearest, this is a special quiz made just for you with all the love in my heart...</p>
+                <div class="heart-animation">
+                    <span class="heart">❤️</span>
+                    <span class="heart">💕</span>
+                    <span class="heart">💖</span>
+                </div>
+                <button onclick="startQuiz()" class="btn btn-primary">Start Our Love Quiz</button>
+                <p class="love-message">Created with endless love, just for you...</p>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quizScreen" class="screen">
+            <div class="quiz-container">
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+                <div class="quiz-content">
+                    <p class="question-number" id="questionNumber"></p>
+                    <h2 id="questionText" class="question"></h2>
+                    <div id="optionsContainer" class="options"></div>
+                    <div class="quiz-buttons">
+                        <button onclick="previousQuestion()" class="btn btn-secondary" id="prevBtn">← Previous</button>
+                        <button onclick="nextQuestion()" class="btn btn-primary" id="nextBtn">Next →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="screen">
+            <div class="results-container">
+                <h1>💝 Results 💝</h1>
+                <div class="score-display">
+                    <p class="score-text">You got <span id="scoreValue">0</span> out of <span id="totalQuestions">0</span></p>
+                </div>
+                <div id="resultMessage" class="result-message"></div>
+                <button onclick="goToLoveLetter()" class="btn btn-primary btn-large">Open My Love Letter For You 💌</button>
+            </div>
+        </div>
+
+        <!-- Love Letter Screen -->
+        <div id="loveLetterScreen" class="screen">
+            <div class="love-letter-container">
+                <div class="letter-paper">
+                    <div class="letter-header">
+                        <h2>My Love Letter To You</h2>
+                        <p class="date">March 31, 2026</p>
+                    </div>
+                    <div class="letter-content" id="letterContent"></div>
+                    <div class="letter-footer">
+                        <p>Forever Yours,</p>
+                        <p class="signature">Your Love ❤️</p>
+                    </div>
+                </div>
+                <div class="surprise-message" id="surpriseMessage"></div>
+                <button onclick="location.reload()" class="btn btn-primary">Take Quiz Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
